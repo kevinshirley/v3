@@ -19,3 +19,21 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+.nav-indicator-selected {
+  display: inline-block;
+  width: 4rem;
+  height: 1px;
+  color: white;
+  background: white;
+  margin: 20px;
+}
+
+.nav-indicator {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  color: white;
+  background: white;
+  margin: 20px;
+}
