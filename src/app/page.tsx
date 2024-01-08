@@ -1,6 +1,7 @@
 import { LinkedInLogoIcon, GitHubLogoIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons';
+import { Badge } from '@radix-ui/themes';
 import CustomCursor from '@/components/custom-cursor';
-import { experiences, ExperienceType } from '@/data/experiences';
+import { experiences, ExperienceType } from '@/mock/experiences';
 
 export default function Home() {
   return (
@@ -80,19 +81,26 @@ export default function Home() {
               <div>
                 {experiences.map((experience: ExperienceType) => (
                   <div key={experience.id} className='mb-8 flex flex-between gap-x-3'>
-                    <div className='gap-x-6'>
-                      <span className='text-slate-400'>{experience.from}</span>
-                      <span className='text-slate-400'> ⎯ </span>
-                      <span className='text-slate-400'>{experience.to}</span>
+                    <div className='z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2'>
+                      {experience.from} ⎯ {experience.to}
                     </div>
                     <div>
-                      <h2 className='text-slate-400'>{experience.role} • {experience.company}</h2>
-                      <h2 className='text-slate-400'>{experience.jobType}</h2>
-                      <ul>
+                      <h2 className='text-slate-200 font-bold'>{experience.role} • {experience.company}</h2>
+                      <h2 className='text-slate-500'>{experience.jobType}</h2>
+                      <ul className='my-2'>
                         {experience.tasks.map((task: string, index: number) => (
-                          <li key={index} className='text-slate-400 flex items-center py-3'>
-                            <span className='nav-indicator nav-indicator-selected mr-4'></span>
+                          <li key={index} className='text-slate-400 flex items-center py-2'>
+                            <span className='mr-4'>⎯</span>
                             <span className='text-xs tracking-widest text-slate-400'>{task}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <ul className='flex flex-wrap'>
+                        {experience.skills?.map((skill: string, index: number) => (
+                          <li key={index} className='text-slate-400 flex items-center py-2'>
+                            <Badge className='text-xs tracking-widest text-slate-400 mr-4' variant="solid" radius="full" color="cyan">
+                              {skill}
+                            </Badge>
                           </li>
                         ))}
                       </ul>

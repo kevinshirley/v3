@@ -6,6 +6,7 @@ export interface ExperienceType {
   company: string;
   jobType: string;
   tasks: string[],
+  skills?: string[],
 }
 
 export const experiences: ExperienceType[] = [
@@ -23,6 +24,16 @@ export const experiences: ExperienceType[] = [
       'Mentor junior engineers and conduct code reviews.',
       'Optimize application performance and troubleshoot issues.',
       'Collaborate with cross-functional teams and stakeholders.',
+    ],
+    skills: [
+      'React',
+      'Vue',
+      'NodeJs',
+      'AWS',
+      'CI/CD',
+      'Javascript',
+      'Typescript',
+      'Testing',
     ],
   },
   {
@@ -42,6 +53,18 @@ export const experiences: ExperienceType[] = [
       'Deploy Design System source code to servers using tools such as Concourse and more',
       'Stencil, JavaScript, Angular, React, TypeScript, NodeJS',
       'Manage builds, testing, deployments with CI/CD pipelines',
+    ],
+    skills: [
+      'React',
+      'Vue',
+      'NodeJs',
+      'AWS',
+      'CI/CD',
+      'Javascript',
+      'Typescript',
+      'Stencil',
+      'Angular',
+      'Testing',
     ],
   },
 ];
