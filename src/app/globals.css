@@ -20,20 +20,32 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-.nav-indicator-selected {
-  display: inline-block;
-  width: 4rem;
-  height: 1px;
-  color: white;
-  background: white;
-  margin: 20px;
+.list-margin-start-removed {
+  margin-block-start: 0;
 }
 
 .nav-indicator {
+  @apply bg-slate-500;
   display: inline-block;
   width: 2rem;
   height: 1px;
-  color: white;
-  background: white;
-  margin: 20px;
+  transition: ease-in-out .1s;
+}
+
+.nav-text {
+  transition: ease-in-out .1s;
+}
+
+.nav-item-hover:hover .nav-indicator-selected {
+  @apply bg-slate-200;
+  width: 4rem;
+}
+
+.nav-item-hover:hover .nav-indicator-selected {
+  @apply bg-slate-200;
+  width: 4rem;
+}
+
+.nav-item-hover:hover .nav-text {
+  @apply text-slate-200;
 }
