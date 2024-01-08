@@ -27,8 +27,8 @@ const Experiences: React.FC = () => (
             </ul>
             <ul className='flex flex-wrap'>
               {experience.skills?.map((skill: string, index: number) => (
-                <li key={index} className='text-slate-400 flex items-center py-2'>
-                  <Badge className='text-xs tracking-widest text-slate-400 mr-4' variant="solid" radius="full" color="cyan">
+                <li key={index} className='text-slate-200 flex items-center py-2'>
+                  <Badge className='text-xs tracking-widest text-slate-200 mr-4' variant="solid" radius="full" color="cyan">
                     {skill}
                   </Badge>
                 </li>
