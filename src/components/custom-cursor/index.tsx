@@ -16,7 +16,7 @@ const CustomCursor: React.FC = () => {
 
   return (
     <div
-      className='inset-0 transition duration-300 lg:absolute'
+      className='inset-0 transition duration-300 lg:absolute pointer-events-none fixed'
       style={{ background: `radial-gradient(600px at ${position.x}px ${position.y}px, rgba(29, 78, 216, 0.15), transparent 80%)` }}
       onMouseMove={(e: MouseEvent) => updateCursorPosition(e)}
     />

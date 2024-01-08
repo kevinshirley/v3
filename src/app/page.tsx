@@ -1,11 +1,12 @@
 import { LinkedInLogoIcon, GitHubLogoIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons';
-import CustomCursor from '@/components/custom-cursor'
+import CustomCursor from '@/components/custom-cursor';
+import { experiences, ExperienceType } from '@/data/experiences';
 
 export default function Home() {
   return (
-    <>
-      <div className='bg-slate-900 lg:py-0 lg:px-24 relative'>
-        <div className='flex flex-col lg:flex-row max-w-screen-xl mx-auto z-30'>
+    <div className='relative'>
+      <div className='bg-slate-900 lg:py-0 lg:px-24'>
+        <div className='flex flex-col lg:flex-row max-w-screen-xl mx-auto'>
           <header className='w-1/2 lg:sticky top-0 lg:max-h-screen lg:py-24 flex justify-between flex-col'>
             <div>
               <div>
@@ -62,43 +63,53 @@ export default function Home() {
             </div>
           </header>
           <main className='w-1/2 lg:pt-24'>
-            <section>
+            <section className='mb-36'>
               <div className='hidden'>
                 <h2 className='text-slate-200'>About</h2>
               </div>
+              <div>
+                <p className='mb-4 text-slate-400'>Back in 2015, I decided to learn SEO, got introduced to HTML tags, got very curious about it and dived head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for a travel company, an e-commerce brand and financial institutions.</p>
+                <p className='mb-4 text-slate-400'>My main focus these days is building products and leading projects for fortune 500 enterprises. In my free time, I build software products for start-ups as a freelance.</p>
+                <p className='mb-4 text-slate-400'>When I’m not at the computer, I’m usually at the gym, hanging out with my wife and my son, or looking for my next travel destination.</p>
+              </div>
             </section>
-            <section>
+            <section className='mt-10 mb-10'>
               <div className='hidden'>
                 <h2 className='text-slate-400'>Experience</h2>
               </div>
+              <div>
+                {experiences.map((experience: ExperienceType) => (
+                  <div key={experience.id} className='mb-8 flex flex-between gap-x-3'>
+                    <div className='gap-x-6'>
+                      <span className='text-slate-400'>{experience.from}</span>
+                      <span className='text-slate-400'> ⎯ </span>
+                      <span className='text-slate-400'>{experience.to}</span>
+                    </div>
+                    <div>
+                      <h2 className='text-slate-400'>{experience.role} • {experience.company}</h2>
+                      <h2 className='text-slate-400'>{experience.jobType}</h2>
+                      <ul>
+                        {experience.tasks.map((task: string, index: number) => (
+                          <li key={index} className='text-slate-400 flex items-center py-3'>
+                            <span className='nav-indicator nav-indicator-selected mr-4'></span>
+                            <span className='text-xs tracking-widest text-slate-400'>{task}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </section>
-            <section>
+            <section className='mt-10 mb-10'>
               <div className='hidden'>
                 <h2 className='text-slate-400'>Projects</h2>
               </div>
-            </section>
-            <section className='mt-10 mb-10 text-slate-400'>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </section>
-            <section className='mt-10 mb-10 text-slate-400'>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </section>
-            <section className='mt-10 mb-10 text-slate-400'>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </section>
-            <section className='mt-10 mb-10 text-slate-400'>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </section>
-            <section className='mt-10 mb-10 text-slate-400'>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </section>
-            <section className='mt-10 mb-10 text-slate-400'>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </section>
           </main>
         </div>
       </div>
       <CustomCursor />
-    </>
+    </div>
   )
 }
