@@ -6,7 +6,7 @@ import Projects from '@/components/projects';
 
 export default function Home() {
   return (
-    <div className='relative py-12 px-6 md:py-20 md:px-12 lg:py-0 lg:px-24'>
+    <div className='relative py-12 px-6 md:py-20 md:px-12 lg:py-0 lg:px-0'>
       <div className='bg-slate-900 lg:py-0 lg:px-24'>
         <div className='flex flex-col lg:flex-row max-w-screen-xl mx-auto'>
           <Header />

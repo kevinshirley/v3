@@ -107,7 +107,7 @@ export const experiences: ExperienceType[] = [
     role: 'Full Stack Developer',
     company: 'Momentum Travel Group',
     jobType: 'Contract',
-    from: 'October 2018',
+    from: 'Oct. 2018',
     to: 'April 2019',
     tasks: [
       'Worked on the online contact center application',
@@ -137,8 +137,8 @@ export const experiences: ExperienceType[] = [
     role: 'Front-End Developer',
     company: 'Levio',
     jobType: 'Contract',
-    from: 'October 2017',
-    to: 'October. 2018',
+    from: 'Oct. 2017',
+    to: 'Oct. 2018',
     tasks: [
       'Pension fund management application',
       'Development of several front-end features in Angular / TypeScript, in a .Net / C# / Java / WebSocket back-end environment',

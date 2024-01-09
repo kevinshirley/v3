@@ -10,8 +10,8 @@ const Experiences: React.FC = () => (
     </div>
     <div>
       {experiences.map((experience: ExperienceType) => (
-        <div key={experience.id} className='mb-8 flex flex-between gap-x-3'>
-          <div className='z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2'>
+        <div key={experience.id} className='mb-24 last:mb-0 md:mb-12 flex flex-col sm:flex-row gap-x-3'>
+          <div className='z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 whitespace-nowrap'>
             {experience.from} ⎯ {experience.to}
           </div>
           <div>
