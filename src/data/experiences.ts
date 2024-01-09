@@ -5,6 +5,7 @@ export interface ExperienceType {
   role: string;
   company: string;
   jobType: string;
+  companyUrl: string;
   tasks: string[],
   skills?: string[],
 }
@@ -17,6 +18,7 @@ export const experiences: ExperienceType[] = [
     jobType: 'Contract',
     from: 'Nov. 2022',
     to: 'Present',
+    companyUrl: 'https://www.morningstar.com/en-ca/company',
     tasks: [
       'Develop and maintain web applications using React, Vue.js, and Node.js.',
       'Design and implement scalable AWS infrastructures for applications.',
@@ -45,6 +47,7 @@ export const experiences: ExperienceType[] = [
     jobType: 'Contract',
     from: 'June 2021',
     to: 'Nov. 2022',
+    companyUrl: 'https://www.desjardins.com/en.html',
     tasks: [
       'Develop new components and new functionalities for their internal Design System',
       'Create reusable code and libraries for future use',
@@ -76,6 +79,7 @@ export const experiences: ExperienceType[] = [
     jobType: 'Permanent Full Time',
     from: 'April 2019',
     to: 'June 2021',
+    companyUrl: 'https://www.aldogroup.com/en',
     tasks: [
       'Develop new user-facing and server-side features',
       'Build reusable code and libraries for future use',
@@ -105,10 +109,11 @@ export const experiences: ExperienceType[] = [
   {
     id: 4,
     role: 'Full Stack Developer',
-    company: 'Momentum Travel Group',
+    company: 'FlightHub',
     jobType: 'Contract',
     from: 'Oct. 2018',
     to: 'April 2019',
+    companyUrl: 'https://corporate.flighthub.com/',
     tasks: [
       'Worked on the online contact center application',
       'Integration of numerous APIs such as Twilio, Amazon Web Services, and more',
@@ -139,6 +144,7 @@ export const experiences: ExperienceType[] = [
     jobType: 'Contract',
     from: 'Oct. 2017',
     to: 'Oct. 2018',
+    companyUrl: 'https://levioconsulting.com/',
     tasks: [
       'Pension fund management application',
       'Development of several front-end features in Angular / TypeScript, in a .Net / C# / Java / WebSocket back-end environment',

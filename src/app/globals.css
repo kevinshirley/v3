@@ -57,3 +57,11 @@ body {
 .project-card:hover h2 {
   @apply text-blue-900;
 }
+
+.experience-company {
+  transition: ease-in-out .1s;
+}
+
+.experience-company:hover {
+  @apply text-blue-900;
+}

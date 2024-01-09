@@ -1,5 +1,6 @@
 import React from 'react';
 import { Badge } from '@radix-ui/themes';
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
 
 import { experiences, ExperienceType } from '@/data/experiences';
 
@@ -15,7 +16,7 @@ const Experiences: React.FC = () => (
             {experience.from} ⎯ {experience.to}
           </div>
           <div>
-            <h2 className='text-slate-200 font-bold'>{experience.role} • {experience.company}</h2>
+            <h2 className='text-slate-200 font-bold flex items-center'>{experience.role} • <a href={experience.companyUrl} className='experience-company flex items-center gap-x-2 ml-1'>{experience.company} <ExternalLinkIcon /></a></h2>
             <h3 className='text-slate-500'>{experience.jobType}</h3>
             <ul className='my-2'>
               {experience.tasks.map((task: string, index: number) => (
