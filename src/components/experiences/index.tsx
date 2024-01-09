@@ -4,9 +4,9 @@ import { Badge } from '@radix-ui/themes';
 import { experiences, ExperienceType } from '@/mock/experiences';
 
 const Experiences: React.FC = () => (
-  <section className='mt-10 mb-10'>
-    <div className='hidden'>
-      <h2 className='text-slate-400'>Experience</h2>
+  <section className='mb-36'>
+    <div className='block lg:hidden mb-8'>
+      <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only'>Experience</h2>
     </div>
     <div>
       {experiences.map((experience: ExperienceType) => (

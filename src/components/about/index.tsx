@@ -2,8 +2,8 @@ import React from 'react';
 
 const About: React.FC = () => (
   <section className='mb-36'>
-    <div className='hidden'>
-      <h2 className='text-slate-200'>About</h2>
+    <div className='block lg:hidden mb-8'>
+      <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only'>About</h2>
     </div>
     <div>
       <p className='mb-4 text-slate-400'>Back in 2015, I decided to learn SEO, got introduced to HTML tags, got very curious about it and dived head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for a travel company, an e-commerce brand and financial institutions.</p>

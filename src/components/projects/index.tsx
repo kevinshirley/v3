@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Projects: React.FC = () => (
-  <section className='mt-10 mb-10'>
-    <div className='hidden'>
-      <h2 className='text-slate-400'>Projects</h2>
+  <section className='mb-36'>
+    <div className='block lg:hidden mb-8'>
+      <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only'>Projects</h2>
     </div>
   </section>
 );

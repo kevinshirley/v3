@@ -4,7 +4,7 @@ import Socials from '@/components/socials';
 import Navigation from '@/components/navigation';
 
 const Header: React.FC = () => (
-  <header className='w-1/2 lg:sticky top-0 lg:max-h-screen lg:py-24 flex justify-between flex-col'>
+  <header className='w-full lg:w-1/2 lg:sticky top-0 lg:max-h-screen lg:py-24 flex justify-between flex-col pb-24'>
     <div>
       <div>
         <h1 className='text-5xl text-slate-200 font-bold'>Kevin Shirley</h1>
@@ -14,7 +14,7 @@ const Header: React.FC = () => (
       </div>
       <Navigation />
     </div>
-    <div>
+    <div className='hidden lg:block'>
       <Socials />
     </div>
   </header>

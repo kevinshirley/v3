@@ -6,11 +6,11 @@ import Projects from '@/components/projects';
 
 export default function Home() {
   return (
-    <div className='relative'>
+    <div className='relative py-12 px-6 md:py-20 md:px-12 lg:py-0 lg:px-24'>
       <div className='bg-slate-900 lg:py-0 lg:px-24'>
         <div className='flex flex-col lg:flex-row max-w-screen-xl mx-auto'>
           <Header />
-          <main className='w-1/2 lg:pt-24'>
+          <main className='w-full lg:w-1/2 lg:pt-24'>
             <About />
             <Experiences />
             <Projects />

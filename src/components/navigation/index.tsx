@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Navigation: React.FC = () => (
-  <nav className='mt-10 ml-1'>
+  <nav className='mt-10 ml-1 hidden lg:block'>
     <ul className='w-max'>
       <li className='list-margin-start-removed nav-item-hover'>
         <a href='/' className='flex items-center py-3'>

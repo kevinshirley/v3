@@ -12,7 +12,7 @@ const Socials: React.FC<SocialsType> = ({
 }) => {
   const socialsClasses = cx({
     'lg:hidden': hidden,
-  }, 'flex justify-start gap-x-6');
+  }, 'flex justify-start gap-x-6 mt-8 lg:mt-0');
 
   return (
     <ul className={socialsClasses}>
