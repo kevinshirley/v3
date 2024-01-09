@@ -9,7 +9,7 @@ const Header: React.FC = () => (
       <div>
         <h1 className='text-5xl text-slate-200 font-bold'>Kevin Shirley</h1>
         <h2 className='text-slate-200 font-medium mt-3 sm:text-xl'>Software Developer</h2>
-        <p className='text-slate-400 mt-4 max-w-xs'>Building intuitive web solutions, coding the future of user-centric experiences for a connected world.</p>
+        <p className='text-slate-400 mt-4 max-w-xs'>Experienced Developer specializing in front-end development, coding the future of user-centric experiences.</p>
         <Socials hidden />
       </div>
       <Navigation />
