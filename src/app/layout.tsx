@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import { Theme } from '@radix-ui/themes'
 
@@ -19,6 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <title>Kevin Shirley | Software Developer</title>
+        <meta name='description' content='Experienced Software Developer specializing in front-end development within cloud environments. Pro,cient in JavaScript/TypeScriptj Node.:sj Reactj VueJsj Reduxj Firebasej and AWS.' />
+      </Head>
       <body className={`${inter.className} bg-slate-900`}>
         <Theme>
           {children}

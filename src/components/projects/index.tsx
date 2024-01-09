@@ -13,7 +13,7 @@ const Projects: React.FC = () => (
     <div>
       {projects.map((project: ProjectType) => (
         <div key={project.id} className='project-card mb-24 md:mb-12 last:mb-0'>
-          <a href={project.url}>
+          <a href={project.url} target='_blank'>
             <div className='flex flex-col gap-x-3'>
               <div className='z-10 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 whitespace-nowrap mb-4'>
                 <Image
