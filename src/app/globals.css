@@ -49,3 +49,11 @@ body {
 .nav-item-hover:hover .nav-text {
   @apply text-slate-200;
 }
+
+.project-card h2 {
+  transition: ease-in-out .1s;
+}
+
+.project-card:hover h2 {
+  @apply text-softelo-green;
+}

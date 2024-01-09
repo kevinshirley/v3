@@ -14,7 +14,9 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        'softelo-blue': '#275C85'
+        'softelo-blue': '#275C85',
+        'softelo-green': '#85C872',
+        'softelo-light-green': '#C2EF7E',
       },
       spacing: {
         '20p': '20%'
