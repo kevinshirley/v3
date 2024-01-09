@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from '@radix-ui/themes';
 
-import { experiences, ExperienceType } from '@/mock/experiences';
+import { experiences, ExperienceType } from '@/data/experiences';
 
 const Experiences: React.FC = () => (
   <section className='mb-36'>
