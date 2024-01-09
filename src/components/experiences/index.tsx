@@ -16,19 +16,19 @@ const Experiences: React.FC = () => (
           </div>
           <div>
             <h2 className='text-slate-200 font-bold'>{experience.role} • {experience.company}</h2>
-            <h2 className='text-slate-500'>{experience.jobType}</h2>
+            <h3 className='text-slate-500'>{experience.jobType}</h3>
             <ul className='my-2'>
               {experience.tasks.map((task: string, index: number) => (
                 <li key={index} className='text-slate-400 flex items-center py-2'>
                   <span className='mr-4'>⎯</span>
-                  <span className='text-xs tracking-widest text-slate-400'>{task}</span>
+                  <span className='text-slate-400'>{task}</span>
                 </li>
               ))}
             </ul>
             <ul className='flex flex-wrap'>
               {experience.skills?.map((skill: string, index: number) => (
                 <li key={index} className='text-slate-200 flex items-center py-2'>
-                  <Badge className='text-xs tracking-widest text-slate-200 mr-4' variant="solid" radius="full" color="cyan">
+                  <Badge className='text-xs tracking-widest text-slate-200 mr-4 bg-blue-900' variant="solid" radius="full" color="blue">
                     {skill}
                   </Badge>
                 </li>
