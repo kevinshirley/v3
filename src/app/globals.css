@@ -55,5 +55,5 @@ body {
 }
 
 .project-card:hover h2 {
-  @apply text-softelo-green;
+  @apply text-blue-900;
 }

@@ -30,7 +30,7 @@ const Projects: React.FC = () => (
                 <ul className='flex flex-wrap'>
                   {project.skills?.map((skill: string, index: number) => (
                     <li key={index} className='text-slate-200 flex items-center py-2'>
-                      <Badge className='text-xs tracking-widest text-slate-200 mr-4 bg-softelo-green' variant='solid' radius='full' color='blue'>
+                      <Badge className='text-xs tracking-widest text-slate-200 mr-4 bg-blue-900' variant='solid' radius='full' color='blue'>
                         {skill}
                       </Badge>
                     </li>
