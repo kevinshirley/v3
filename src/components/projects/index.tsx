@@ -6,7 +6,7 @@ import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import { projects, ProjectType } from '@/data/projects';
 
 const Projects: React.FC = () => (
-  <section className='mb-36'>
+  <section className='mb-36' id='projects'>
     <div className='block lg:hidden mb-8'>
       <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only'>Projects</h2>
     </div>
