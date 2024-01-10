@@ -32,7 +32,7 @@ export const projects: ProjectType[] = [
   {
     id: 2,
     title: 'Stock Market Recommender',
-    description: 'Stock ticker details and market news.',
+    description: 'Built a Next.js app leveraging the Finnhub API to provide real-time stock ticker prices and the latest market news for seamless financial insights.',
     image: '/stockmarketrecommender.png',
     url: 'https://stockmarketrecommender.vercel.app/',
     skills: [
@@ -44,6 +44,34 @@ export const projects: ProjectType[] = [
       'CSS',
       'Finnhub API',
       'Twitter API',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Tic Tac Toe Game',
+    description: 'Responsive Tic Tac Toe game built using React, featuring interactive gameplay, real-time state updates, and a winning logic algorithm for an engaging user experience.',
+    image: '/tic-tac-toe.png',
+    url: 'https://tictactoe-sigma.vercel.app',
+    skills: [
+      'React',
+      'Redux',
+      'Javascript',
+      'CSS',
+    ],
+  },
+  {
+    id: 4,
+    title: 'Trip Imagine',
+    description: 'Crafted a web app for creating and showcasing travel itineraries, offering users a seamless platform for planning and sharing their journeys.',
+    image: '/trip-imagine.png',
+    url: 'https://tripimagine.com',
+    skills: [
+      'React',
+      'Redux',
+      'Javascript',
+      'NodeJS',
+      'CSS',
+      'Google Maps API',
     ],
   },
 ];
