@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge } from '@radix-ui/themes';
-import { ExternalLinkIcon } from '@radix-ui/react-icons';
+import { ExternalLinkIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 
 import { experiences, ExperienceType } from '@/data/experiences';
 
@@ -16,7 +16,7 @@ const Experiences: React.FC = () => (
             {experience.from} ⎯ {experience.to}
           </div>
           <div>
-            <h2 className='text-slate-200 font-bold flex items-center'>{experience.role} • <a href={experience.companyUrl} className='experience-company flex items-center gap-x-2 ml-1' target='_blank'>{experience.company} <ExternalLinkIcon /></a></h2>
+            <h2 className='text-slate-200 font-bold flex items-center whitespace-nowrap'>{experience.role} • <a href={experience.companyUrl} className='experience-company flex items-center gap-x-2 ml-1' target='_blank'>{experience.company} <ExternalLinkIcon /></a></h2>
             <h3 className='text-slate-500'>{experience.jobType}</h3>
             <ul className='my-2'>
               {experience.tasks.map((task: string, index: number) => (
@@ -38,6 +38,9 @@ const Experiences: React.FC = () => (
           </div>
         </div>
       ))}
+    </div>
+    <div className='mt-12'>
+      <a className='text-slate-200 font-bold flex items-center gap-x-2 hover:gap-x-3 hover:underline transition-all' href="/resume.pdf">View Full Resume <ArrowRightIcon /></a>
     </div>
   </section>
 );
