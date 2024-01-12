@@ -33,7 +33,7 @@ export const experiences: ExperienceType[] = [
       'NodeJs',
       'AWS',
       'CI/CD',
-      'Salesforce',
+      'Serverless',
       'Javascript',
       'Typescript',
       'Unit Testing (TDD)',
