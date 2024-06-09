@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import { Theme } from '@radix-ui/themes'
+import { Toaster } from '@/utils/toast';
 
 import './globals.css'
 import '@radix-ui/themes/styles.css'
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-slate-900`}>
         <Theme>
           {children}
+          <Toaster position='top-right' />
         </Theme>
       </body>
     </html>
