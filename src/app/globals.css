@@ -22,6 +22,7 @@ body {
 
 .list-margin-start-removed {
   margin-block-start: 0;
+  cursor: pointer;
 }
 
 .nav-indicator {
