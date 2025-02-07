@@ -6,9 +6,9 @@ const About: React.FC = () => (
       <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only'>About</h2>
     </div>
     <div>
-      <p className='mb-4 text-slate-400'>In 2015, my journey into coding began with a curiosity sparked by learning SEO and exploring HTML tags. Today, I’ve developed software for diverse industries—from travel and e-commerce to financial institutions.</p>
-      <p className='mb-4 text-slate-400'>Currently, my passion lies in spearheading projects and building full stack enterprise-level software solutions. Beyond this, I enjoy freelance work on software products for startups.</p>
-      <p className='mb-4 text-slate-400'>Away from the screen, you’ll find me at the gym, cherishing moments with my family, or planning my next travel adventure.</p>
+      <p className='mb-4 text-slate-400'>My coding journey began in 2015, sparked by curiosity about SEO and HTML. Since then, I’ve built enterprise solutions across industries like finance, insurance and e-commerce.</p>
+      <p className='mb-4 text-slate-400'>Today, I specialize in React, TypeScript, Node.js, and AWS, crafting scalable full-stack applications. I’m always exploring new technologies to refine my skills and stay ahead in the ever-evolving tech landscape.</p>
+      <p className='mb-4 text-slate-400'>Beyond coding, I stay active at the gym, enjoy time with family, and plan my next travel adventure.</p>
     </div>
   </section>
 );
