@@ -5,12 +5,13 @@ export interface ProjectType {
   description: string;
   url: string;
   skills?: string[];
+  github?: string;
 }
 
 export const projects: ProjectType[] = [
   {
     id: 1,
-    title: 'Online Quote Form Builder',
+    title: 'Quote Form Builder',
     description: 'Web app for creating and customizing quote forms in real-time. Users can dynamically input details and instantly view the calculated quote amount as they complete the form.',
     url: 'https://quote-form-beryl.vercel.app/',
     image: '/quote-forms-project-softelo-kevin-shirley.png',
@@ -22,6 +23,7 @@ export const projects: ProjectType[] = [
       'Typescript',
       'Tailwind',
     ],
+    github: 'https://github.com/kevinshirley/quote-form'
   },
   {
     id: 2,
@@ -43,6 +45,7 @@ export const projects: ProjectType[] = [
       'Stripe API',
       'CMS',
     ],
+    github: 'https://github.com/softelo/billmate'
   },
   {
     id: 3,
@@ -60,6 +63,7 @@ export const projects: ProjectType[] = [
       'Finnhub API',
       'Twitter API',
     ],
+    github: 'https://github.com/kevinshirley/stockmarketrecommender'
   },
   {
     id: 4,
@@ -73,5 +77,6 @@ export const projects: ProjectType[] = [
       'Javascript',
       'CSS',
     ],
+    github: 'https://github.com/kevinshirley/tictactoe'
   },
 ];

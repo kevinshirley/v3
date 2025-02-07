@@ -52,10 +52,17 @@ body {
 
 .project-card h2 {
   transition: ease-in-out .1s;
+  white-space: nowrap;
 }
 
-.project-card:hover h2 {
+.project-card h2 a:hover {
   @apply text-blue-900;
+}
+
+.project-card h2 a {
+  @apply flex;
+  @apply items-center;
+  @apply gap-x-2;
 }
 
 .experience-company {

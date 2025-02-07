@@ -13,19 +13,20 @@ const Projects: React.FC = () => (
     <div>
       {projects.map((project: ProjectType) => (
         <div key={project.id} className='project-card mb-24 md:mb-12 last:mb-0'>
-          <a href={project.url} target='_blank'>
             <div className='flex flex-col gap-x-3'>
               <div className='z-10 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 whitespace-nowrap mb-4'>
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={200}
-                  height={48}
-                  priority
-                />
+                <a href={project.url} target='_blank'>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={200}
+                    height={48}
+                    priority
+                  />
+                </a>
               </div>
               <div>
-                <h2 className='text-slate-200 font-bold flex items-center gap-x-2 mb-2'>{project.title} <ExternalLinkIcon /></h2>
+                <h2 className='text-slate-200 font-bold flex items-center gap-x-2 mb-2'><a href={project.url} target='_blank'>{project.title} <ExternalLinkIcon /></a>  • <a href={project?.github ? project.github : '#'} target='_blank'>Github <ExternalLinkIcon /></a></h2>
                 <p className='text-slate-500 mb-2'>{project.description}</p>
                 <ul className='flex flex-wrap'>
                   {project.skills?.map((skill: string, index: number) => (
@@ -38,7 +39,6 @@ const Projects: React.FC = () => (
                 </ul>
               </div>
             </div>
-          </a>
         </div>
       ))}
     </div>
