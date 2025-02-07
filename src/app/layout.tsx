@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Kevin Shirley | Software Developer',
-  description: 'Experienced Software Developer specializing in front-end development within cloud environments. Proficient in JavaScript/TypeScript, NodeJS, React, VueJS, Redux, Firebase, and AWS.',
+  description: 'Experienced Software Developer specializing in React, TypeScript, and AWS, building cloud-based enterprise solutions.',
 }
 
 export default function RootLayout({
