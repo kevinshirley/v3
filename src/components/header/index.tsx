@@ -8,8 +8,8 @@ const Header: React.FC = () => (
     <div>
       <div>
         <h1 className='text-5xl text-slate-200 font-bold'><a href='/'>Kevin Shirley</a></h1>
-        <h2 className='text-slate-200 font-medium mt-3 sm:text-xl'>Software Developer</h2>
-        <p className='text-slate-400 mt-4 max-w-xs'>Experienced Software Developer specializing in React, TypeScript, AWS, and Salesforce, building cloud-based enterprise solutions.</p>
+        <h2 className='text-slate-200 font-medium mt-3 sm:text-xl'>Senior Salesforce Developer</h2>
+        <p className='text-slate-400 mt-4 max-w-xs'>Senior Salesforce Developer with full-stack expertise in Apex, LWC, React, and Node.js, delivering scalable enterprise solutions across cloud platforms.</p>
         <Socials hidden />
       </div>
       <Navigation />
