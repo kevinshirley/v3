@@ -3,6 +3,7 @@ import Header from '@/components/header';
 import About from '@/components/about';
 import Experiences from '@/components/experiences';
 import Projects from '@/components/projects';
+import MobileNavigation from '@/components/mobile-navigation';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         </div>
       </div>
       <CustomCursor />
+      <MobileNavigation />
     </div>
   )
 }

@@ -73,3 +73,10 @@ body {
 .experience-company:hover {
   @apply text-blue-900;
 }
+
+/* Keep section headings off the screen edge when scrolled to from the mobile nav */
+@media (max-width: 1023px) {
+  section[id] {
+    scroll-margin-top: 1.5rem;
+  }
+}

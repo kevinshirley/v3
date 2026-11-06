@@ -7,7 +7,13 @@ interface ListItemProps {
   scrollTo: string;
 }
 
-const scrollToSection = (id: string) => {
+export const navItems = [
+  { item: 'About', scrollTo: 'about' },
+  { item: 'Experiences', scrollTo: 'experiences' },
+  { item: 'Projects', scrollTo: 'projects' },
+];
+
+export const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
   element?.scrollIntoView({ behavior: 'smooth' });
 };
@@ -22,18 +28,9 @@ const ListItem: React.FC<ListItemProps> = ({ item, scrollTo }) => (
 const Navigation: React.FC = () => (
   <nav className='mt-10 ml-1 hidden lg:block'>
     <ul className='w-max'>
-      <ListItem
-        item='About'
-        scrollTo='about'
-      />
-      <ListItem
-        item='Experiences'
-        scrollTo='experiences'
-      />
-      <ListItem
-        item='Projects'
-        scrollTo='projects'
-      />
+      {navItems.map(({ item, scrollTo }) => (
+        <ListItem key={scrollTo} item={item} scrollTo={scrollTo} />
+      ))}
     </ul>
   </nav>
 );
