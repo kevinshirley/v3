@@ -2,16 +2,15 @@
 
 import React from 'react';
 
+import { ui } from '@/data/ui';
+import { Locale } from '@/i18n/config';
+
 interface ListItemProps {
   item: string;
   scrollTo: string;
 }
 
-export const navItems = [
-  { item: 'About', scrollTo: 'about' },
-  { item: 'Experiences', scrollTo: 'experiences' },
-  { item: 'Projects', scrollTo: 'projects' },
-];
+export const navItems = ['about', 'experiences', 'projects'] as const;
 
 export const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
@@ -25,11 +24,11 @@ const ListItem: React.FC<ListItemProps> = ({ item, scrollTo }) => (
   </li>
 );
 
-const Navigation: React.FC = () => (
+const Navigation: React.FC<{ locale: Locale }> = ({ locale }) => (
   <nav className='mt-10 ml-1 hidden lg:block'>
     <ul className='w-max'>
-      {navItems.map(({ item, scrollTo }) => (
-        <ListItem key={scrollTo} item={item} scrollTo={scrollTo} />
+      {navItems.map((section) => (
+        <ListItem key={section} item={ui[locale].nav[section]} scrollTo={section} />
       ))}
     </ul>
   </nav>

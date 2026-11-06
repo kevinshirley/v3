@@ -53,7 +53,6 @@ body {
 
 .project-card h2 {
   transition: ease-in-out .1s;
-  white-space: nowrap;
 }
 
 .project-card h2 a:hover {

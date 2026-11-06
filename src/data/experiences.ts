@@ -1,30 +1,40 @@
+import { Localized } from '@/i18n/config';
+
 export interface ExperienceType {
   id: number;
-  from: string;
-  to: string;
-  role: string;
+  from: Localized;
+  to: Localized;
+  role: Localized;
   company: string;
-  jobType: string;
+  jobType: Localized;
   companyUrl: string;
-  tasks: string[],
+  tasks: Localized<string[]>,
   skills?: string[],
 }
 
 export const experiences: ExperienceType[] = [
   {
     id: 9,
-    role: 'Senior Salesforce Developer',
+    role: { en: 'Senior Salesforce Developer', fr: 'Développeur Salesforce sénior' },
     company: 'Investissement Québec',
-    jobType: 'Permanent Full Time',
-    from: 'Apr. 2026',
-    to: 'Present',
+    jobType: { en: 'Permanent Full Time', fr: 'Permanent à temps plein' },
+    from: { en: 'Apr. 2026', fr: 'avr. 2026' },
+    to: { en: 'Present', fr: 'Présent' },
     companyUrl: 'https://www.investquebec.com/',
-    tasks: [
-      'Developed and implemented JWT Bearer OAuth authentication flows for secure document generation platform and DocuSign integrations, meeting mandatory Salesforce MFA security compliance deadlines.',
-      'Designed and deployed enterprise-scale Flow automation and Apex logic leveraging bulkified patterns to optimize governor limits and high-volume batch processing.',
-      'Integrated third-party platforms with Salesforce file architecture for automated document generation and signature workflows.',
-      'Translated business requirements from key stakeholders into technical specifications through functional analysis; architected scalable Salesforce solutions and documented implementation patterns for team knowledge transfer.',
-    ],
+    tasks: {
+      en: [
+        'Developed and implemented JWT Bearer OAuth authentication flows for secure document generation platform and DocuSign integrations, meeting mandatory Salesforce MFA security compliance deadlines.',
+        'Designed and deployed enterprise-scale Flow automation and Apex logic leveraging bulkified patterns to optimize governor limits and high-volume batch processing.',
+        'Integrated third-party platforms with Salesforce file architecture for automated document generation and signature workflows.',
+        'Translated business requirements from key stakeholders into technical specifications through functional analysis; architected scalable Salesforce solutions and documented implementation patterns for team knowledge transfer.',
+      ],
+      fr: [
+        'Développé et implémenté des flows d’authentification JWT Bearer OAuth pour une plateforme sécurisée de génération de documents et des intégrations DocuSign, en respectant les échéances obligatoires de conformité MFA de Salesforce.',
+        'Conçu et déployé de l’automatisation Flow et de la logique Apex à l’échelle de l’entreprise, à l’aide de patterns bulkified pour optimiser les governor limits et le batch processing à haut volume.',
+        'Intégré des plateformes tierces à l’architecture de fichiers Salesforce pour automatiser les workflows de génération de documents et de signature.',
+        'Traduit les besoins d’affaires des principales parties prenantes en spécifications techniques grâce à l’analyse fonctionnelle; conçu l’architecture de solutions Salesforce scalables et documenté les patterns d’implémentation pour le transfert de connaissances à l’équipe.',
+      ],
+    },
     skills: [
       'Salesforce',
       'Apex',
@@ -36,22 +46,34 @@ export const experiences: ExperienceType[] = [
   },
   {
     id: 8,
-    role: 'Senior Salesforce Developer',
+    role: { en: 'Senior Salesforce Developer', fr: 'Développeur Salesforce sénior' },
     company: 'Equativ',
-    jobType: 'Contract',
-    from: 'Jan. 2025',
-    to: 'Apr. 2026',
+    jobType: { en: 'Contract', fr: 'Contrat' },
+    from: { en: 'Jan. 2025', fr: 'janv. 2025' },
+    to: { en: 'Apr. 2026', fr: 'avr. 2026' },
     companyUrl: 'https://equativ.com',
-    tasks: [
-      'Designed and implemented Apex trigger handlers and service-layer logic (CampaignBuilder, EnvelopeStatusHandler, validation services).',
-      'Built and refactored Lightning Web Components to support campaign configuration and pricing management workflows.',
-      'Implemented automation for Quote → Campaign creation, billing method standardization, and document transfer using ContentDocumentLink.',
-      'Integrated DocuSign envelope status updates to automatically transition business records upon signature completion.',
-      'Developed bulk-safe Apex logic aligned with Salesforce governor limits and enterprise best practices.',
-      'Contributed to revenue and billing logic improvements, including currency-aware implementations and Snowflake data mapping.',
-      'Worked within Salesforce DX workflows using scratch orgs, GitLab repositories, and CI/CD pipelines.',
-      'Collaborated with cross-functional teams (Finance, Operations, Product) to align technical implementation with business requirements.',
-    ],
+    tasks: {
+      en: [
+        'Designed and implemented Apex trigger handlers and service-layer logic (CampaignBuilder, EnvelopeStatusHandler, validation services).',
+        'Built and refactored Lightning Web Components to support campaign configuration and pricing management workflows.',
+        'Implemented automation for Quote → Campaign creation, billing method standardization, and document transfer using ContentDocumentLink.',
+        'Integrated DocuSign envelope status updates to automatically transition business records upon signature completion.',
+        'Developed bulk-safe Apex logic aligned with Salesforce governor limits and enterprise best practices.',
+        'Contributed to revenue and billing logic improvements, including currency-aware implementations and Snowflake data mapping.',
+        'Worked within Salesforce DX workflows using scratch orgs, GitLab repositories, and CI/CD pipelines.',
+        'Collaborated with cross-functional teams (Finance, Operations, Product) to align technical implementation with business requirements.',
+      ],
+      fr: [
+        'Conçu et implémenté des trigger handlers Apex et de la logique service-layer (CampaignBuilder, EnvelopeStatusHandler, services de validation).',
+        'Développé et refactorisé des Lightning Web Components pour soutenir les workflows de configuration de campagnes et de gestion des prix.',
+        'Implémenté l’automatisation de la création Quote → Campaign, la standardisation des méthodes de facturation et le transfert de documents à l’aide de ContentDocumentLink.',
+        'Intégré les mises à jour de statut d’enveloppe DocuSign pour faire évoluer automatiquement les enregistrements d’affaires une fois la signature complétée.',
+        'Développé de la logique Apex bulk-safe conforme aux governor limits de Salesforce et aux meilleures pratiques d’entreprise.',
+        'Contribué à l’amélioration de la logique de revenus et de facturation, notamment des implémentations multidevises et du data mapping Snowflake.',
+        'Travaillé dans des workflows Salesforce DX avec des scratch orgs, des dépôts GitLab et des pipelines CI/CD.',
+        'Collaboré avec des équipes multidisciplinaires (Finance, Opérations, Produit) pour aligner l’implémentation technique sur les besoins d’affaires.',
+      ],
+    },
     skills: [
       'Salesforce',
       'Apex',
@@ -65,18 +87,26 @@ export const experiences: ExperienceType[] = [
   },
   {
     id: 7,
-    role: 'Senior Software Developer Consultant',
+    role: { en: 'Senior Software Developer Consultant', fr: 'Consultant sénior en développement logiciel' },
     company: 'ACQ',
-    jobType: 'Contract',
-    from: 'Jul. 2024',
-    to: 'Jan. 2025',
+    jobType: { en: 'Contract', fr: 'Contrat' },
+    from: { en: 'Jul. 2024', fr: 'juill. 2024' },
+    to: { en: 'Jan. 2025', fr: 'janv. 2025' },
     companyUrl: 'https://acq.org/en',
-    tasks: [
-      'Maintained and enhanced a React and Node.js client portal, managing API calls to retrieve and display data from an internal SuiteCRM application.',
-      'Refactored business logic from the legacy CRM into Salesforce Apex backend services and custom Lightning Web Components for improved maintainability and scalability.',
-      'Deployed and managed cloud-based applications on AWS and Azure, including setting up CI/CD pipelines to ensure scalability, reliability, and efficient deployment.',
-      'Maintained a Java middleware API connecting the CRM database to the React built client portal and the Wordpress website, ensuring reliable and secure data exchange.',
-    ],
+    tasks: {
+      en: [
+        'Maintained and enhanced a React and Node.js client portal, managing API calls to retrieve and display data from an internal SuiteCRM application.',
+        'Refactored business logic from the legacy CRM into Salesforce Apex backend services and custom Lightning Web Components for improved maintainability and scalability.',
+        'Deployed and managed cloud-based applications on AWS and Azure, including setting up CI/CD pipelines to ensure scalability, reliability, and efficient deployment.',
+        'Maintained a Java middleware API connecting the CRM database to the React built client portal and the Wordpress website, ensuring reliable and secure data exchange.',
+      ],
+      fr: [
+        'Maintenu et amélioré un portail client React et Node.js, en gérant les appels API pour récupérer et afficher les données d’une application SuiteCRM interne.',
+        'Refactorisé la logique d’affaires du CRM legacy vers des services backend Salesforce Apex et des Lightning Web Components personnalisés pour améliorer la maintenabilité et la scalabilité.',
+        'Déployé et géré des applications cloud sur AWS et Azure, notamment la mise en place de pipelines CI/CD pour assurer la scalabilité, la fiabilité et l’efficacité des déploiements.',
+        'Maintenu une API middleware Java reliant la base de données du CRM au portail client React et au site web Wordpress, pour un échange de données fiable et sécurisé.',
+      ],
+    },
     skills: [
       'SuiteCRM',
       'Salesforce',
@@ -89,18 +119,26 @@ export const experiences: ExperienceType[] = [
   },
   {
     id: 6,
-    role: 'Senior Software Developer Consultant',
+    role: { en: 'Senior Software Developer Consultant', fr: 'Consultant sénior en développement logiciel' },
     company: 'Blue Cross',
-    jobType: 'Contract',
-    from: 'Oct. 2023',
-    to: 'Jul. 2024',
+    jobType: { en: 'Contract', fr: 'Contrat' },
+    from: { en: 'Oct. 2023', fr: 'oct. 2023' },
+    to: { en: 'Jul. 2024', fr: 'juill. 2024' },
     companyUrl: 'https://qc.bluecross.ca/home',
-    tasks: [
-      'Developed and customized Salesforce solutions for an insurance company, including CPQ implementations and Lightning Web Components, to streamline the quoting and sales processes.',
-      'Maintained and enhanced a React Native client portal, managing API calls to retrieve and display data from an internal Salesforce application.',
-      'Deployed and managed cloud-based applications on AWS and Azure, including setting up CI/CD pipelines to ensure scalability, reliability, and efficient deployment.',
-      'Maintained a Java middleware API connecting the Salesforce database to React and React Native apps, ensuring reliable and secure data exchange.',
-    ],
+    tasks: {
+      en: [
+        'Developed and customized Salesforce solutions for an insurance company, including CPQ implementations and Lightning Web Components, to streamline the quoting and sales processes.',
+        'Maintained and enhanced a React Native client portal, managing API calls to retrieve and display data from an internal Salesforce application.',
+        'Deployed and managed cloud-based applications on AWS and Azure, including setting up CI/CD pipelines to ensure scalability, reliability, and efficient deployment.',
+        'Maintained a Java middleware API connecting the Salesforce database to React and React Native apps, ensuring reliable and secure data exchange.',
+      ],
+      fr: [
+        'Développé et personnalisé des solutions Salesforce pour une compagnie d’assurance, notamment des implémentations CPQ et des Lightning Web Components, afin de simplifier les processus de soumission et de vente.',
+        'Maintenu et amélioré un portail client React Native, en gérant les appels API pour récupérer et afficher les données d’une application Salesforce interne.',
+        'Déployé et géré des applications cloud sur AWS et Azure, notamment la mise en place de pipelines CI/CD pour assurer la scalabilité, la fiabilité et l’efficacité des déploiements.',
+        'Maintenu une API middleware Java reliant la base de données Salesforce aux applications React et React Native, pour un échange de données fiable et sécurisé.',
+      ],
+    },
     skills: [
       'Salesforce',
       'CPQ',
@@ -116,20 +154,30 @@ export const experiences: ExperienceType[] = [
   },
   {
     id: 5,
-    role: 'Senior Software Engineer',
+    role: { en: 'Senior Software Engineer', fr: 'Développeur logiciel sénior' },
     company: 'Morningstar',
-    jobType: 'Contract',
-    from: 'Nov. 2022',
-    to: 'Oct. 2023',
+    jobType: { en: 'Contract', fr: 'Contrat' },
+    from: { en: 'Nov. 2022', fr: 'nov. 2022' },
+    to: { en: 'Oct. 2023', fr: 'oct. 2023' },
     companyUrl: 'https://www.morningstar.com/en-ca/company',
-    tasks: [
-      'Develop and maintain web applications using React, Vue.js, and Node.js.',
-      'Design and implement scalable AWS infrastructures for applications.',
-      'Build and manage CI/CD pipelines using AWS services.',
-      'Mentor junior engineers and conduct code reviews.',
-      'Implement data visualization solutions for various B2B financial SaaS products.',
-      'Maintain various Node.js REST APIs to consume internal microservices with AWS ApiGateway.',
-    ],
+    tasks: {
+      en: [
+        'Develop and maintain web applications using React, Vue.js, and Node.js.',
+        'Design and implement scalable AWS infrastructures for applications.',
+        'Build and manage CI/CD pipelines using AWS services.',
+        'Mentor junior engineers and conduct code reviews.',
+        'Implement data visualization solutions for various B2B financial SaaS products.',
+        'Maintain various Node.js REST APIs to consume internal microservices with AWS ApiGateway.',
+      ],
+      fr: [
+        'Développé et maintenu des applications web avec React, Vue.js et Node.js.',
+        'Conçu et implémenté des infrastructures AWS scalables pour les applications.',
+        'Mis en place et géré des pipelines CI/CD à l’aide des services AWS.',
+        'Encadré des développeurs juniors et effectué des code reviews.',
+        'Implémenté des solutions de data visualization pour divers produits SaaS financiers B2B.',
+        'Maintenu diverses API REST Node.js pour consommer des microservices internes avec AWS ApiGateway.',
+      ],
+    },
     skills: [
       'Vue',
       'React',
@@ -145,20 +193,30 @@ export const experiences: ExperienceType[] = [
   },
   {
     id: 4,
-    role: 'Full Stack Developer',
+    role: { en: 'Full Stack Developer', fr: 'Développeur Full Stack' },
     company: 'Desjardins',
-    jobType: 'Contract',
-    from: 'June 2021',
-    to: 'Nov. 2022',
+    jobType: { en: 'Contract', fr: 'Contrat' },
+    from: { en: 'June 2021', fr: 'juin 2021' },
+    to: { en: 'Nov. 2022', fr: 'nov. 2022' },
     companyUrl: 'https://www.desjardins.com/en.html',
-    tasks: [
-      'Built custom LWC components with Javascript and Apex to extend Salesforce functionality for a financial institution\'s internal platform.',
-      'Create reusable code and libraries for future use.',
-      'Ensure user technical accessibility in UI/UX designs.',
-      'Optimize components for maximum speed and scalability.',
-      'Collaborate with other team members and stakeholders.',
-      'Manage builds, testing, deployments with CI/CD pipelines on AWS.',
-    ],
+    tasks: {
+      en: [
+        'Built custom LWC components with Javascript and Apex to extend Salesforce functionality for a financial institution\'s internal platform.',
+        'Create reusable code and libraries for future use.',
+        'Ensure user technical accessibility in UI/UX designs.',
+        'Optimize components for maximum speed and scalability.',
+        'Collaborate with other team members and stakeholders.',
+        'Manage builds, testing, deployments with CI/CD pipelines on AWS.',
+      ],
+      fr: [
+        'Développé des composants LWC personnalisés avec Javascript et Apex pour étendre les fonctionnalités Salesforce de la plateforme interne d’une institution financière.',
+        'Créé du code et des librairies réutilisables pour usage futur.',
+        'Assuré l’accessibilité technique des designs UI/UX.',
+        'Optimisé les composants pour une vitesse et une scalabilité maximales.',
+        'Collaboré avec les membres de l’équipe et les parties prenantes.',
+        'Géré les builds, les tests et les déploiements avec des pipelines CI/CD sur AWS.',
+      ],
+    },
     skills: [
       'React',
       'Salesforce',
@@ -172,22 +230,34 @@ export const experiences: ExperienceType[] = [
   },
   {
     id: 3,
-    role: 'Full Stack Developer',
+    role: { en: 'Full Stack Developer', fr: 'Développeur Full Stack' },
     company: 'ALDO Group',
-    jobType: 'Permanent Full Time',
-    from: 'April 2019',
-    to: 'June 2021',
+    jobType: { en: 'Permanent Full Time', fr: 'Permanent à temps plein' },
+    from: { en: 'April 2019', fr: 'avril 2019' },
+    to: { en: 'June 2021', fr: 'juin 2021' },
     companyUrl: 'https://www.aldogroup.com/en',
-    tasks: [
-      'Develop new user-facing and server-side features.',
-      'Build reusable code and libraries for future use.',
-      'Ensure the technical feasibility of UI/UX designs.',
-      'Optimize applications for maximum speed and scalability.',
-      'Assure that all user input is validated before submitting to back-end services.',
-      'Developed custom Apex services to integrate Salesforce with various eCommerce backend applications.',
-      'Interact with many APIs configured on AWS API Gateway and AWS Lambda.',
-      'Manage builds, testing, deployments with CI/CD pipelines on AWS.',
-    ],
+    tasks: {
+      en: [
+        'Develop new user-facing and server-side features.',
+        'Build reusable code and libraries for future use.',
+        'Ensure the technical feasibility of UI/UX designs.',
+        'Optimize applications for maximum speed and scalability.',
+        'Assure that all user input is validated before submitting to back-end services.',
+        'Developed custom Apex services to integrate Salesforce with various eCommerce backend applications.',
+        'Interact with many APIs configured on AWS API Gateway and AWS Lambda.',
+        'Manage builds, testing, deployments with CI/CD pipelines on AWS.',
+      ],
+      fr: [
+        'Développé de nouvelles fonctionnalités côté utilisateur et côté serveur.',
+        'Créé du code et des librairies réutilisables pour usage futur.',
+        'Assuré la faisabilité technique des designs UI/UX.',
+        'Optimisé les applications pour une vitesse et une scalabilité maximales.',
+        'Veillé à ce que toutes les entrées utilisateur soient validées avant leur envoi aux services back-end.',
+        'Développé des services Apex personnalisés pour intégrer Salesforce à diverses applications backend eCommerce.',
+        'Interagi avec de nombreuses API configurées sur AWS API Gateway et AWS Lambda.',
+        'Géré les builds, les tests et les déploiements avec des pipelines CI/CD sur AWS.',
+      ],
+    },
     skills: [
       'React',
       'Redux',
@@ -203,18 +273,26 @@ export const experiences: ExperienceType[] = [
   },
   {
     id: 2,
-    role: 'Full Stack Developer',
+    role: { en: 'Full Stack Developer', fr: 'Développeur Full Stack' },
     company: 'FlightHub',
-    jobType: 'Contract',
-    from: 'Oct. 2018',
-    to: 'April 2019',
+    jobType: { en: 'Contract', fr: 'Contrat' },
+    from: { en: 'Oct. 2018', fr: 'oct. 2018' },
+    to: { en: 'April 2019', fr: 'avril 2019' },
     companyUrl: 'https://corporate.flighthub.com/',
-    tasks: [
-      'Built a custom web application to transition from the Salesforce contact center solution to an in-house contact center platform for greater flexibility and control.',
-      'Integration of numerous APIs such as Twilio, Amazon Web Services, and more.',
-      'Development of multiple features using technologies such as Laravel, React, Redux, MySQL, MongoDB and more.',
-      'Continuous application refactoring for performance.',
-    ],
+    tasks: {
+      en: [
+        'Built a custom web application to transition from the Salesforce contact center solution to an in-house contact center platform for greater flexibility and control.',
+        'Integration of numerous APIs such as Twilio, Amazon Web Services, and more.',
+        'Development of multiple features using technologies such as Laravel, React, Redux, MySQL, MongoDB and more.',
+        'Continuous application refactoring for performance.',
+      ],
+      fr: [
+        'Développé une application web sur mesure pour passer de la solution de centre de contact Salesforce à une plateforme de centre de contact interne offrant plus de flexibilité et de contrôle.',
+        'Intégration de nombreuses API telles que Twilio, Amazon Web Services et plus encore.',
+        'Développement de plusieurs fonctionnalités avec des technologies telles que Laravel, React, Redux, MySQL, MongoDB et plus encore.',
+        'Refactoring continu de l’application pour la performance.',
+      ],
+    },
     skills: [
       'React',
       'Redux',
@@ -232,19 +310,28 @@ export const experiences: ExperienceType[] = [
   },
   {
     id: 1,
-    role: 'Front-End Developer',
+    role: { en: 'Front-End Developer', fr: 'Développeur Front-End' },
     company: 'Levio',
-    jobType: 'Contract',
-    from: 'Oct. 2017',
-    to: 'Oct. 2018',
+    jobType: { en: 'Contract', fr: 'Contrat' },
+    from: { en: 'Oct. 2017', fr: 'oct. 2017' },
+    to: { en: 'Oct. 2018', fr: 'oct. 2018' },
     companyUrl: 'https://levioconsulting.com/',
-    tasks: [
-      'Pension fund management application.',
-      'Development of several front-end features in Angular / TypeScript, in a .Net / C# / Java / WebSocket back-end environment.',
-      'State of the front-end application manage with Redux.',
-      'Each features validated by unit tests.',
-      'Agile Team Environment.',
-    ],
+    tasks: {
+      en: [
+        'Pension fund management application.',
+        'Development of several front-end features in Angular / TypeScript, in a .Net / C# / Java / WebSocket back-end environment.',
+        'State of the front-end application manage with Redux.',
+        'Each features validated by unit tests.',
+        'Agile Team Environment.',
+      ],
+      fr: [
+        'Application de gestion de fonds de pension.',
+        'Développement de plusieurs fonctionnalités front-end en Angular / TypeScript, dans un environnement back-end .Net / C# / Java / WebSocket.',
+        'Gestion du state de l’application front-end avec Redux.',
+        'Chaque fonctionnalité validée par des unit tests.',
+        'Environnement d’équipe Agile.',
+      ],
+    },
     skills: [
       'Angular',
       'Typescript',
