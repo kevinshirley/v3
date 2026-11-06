@@ -12,6 +12,29 @@ export interface ExperienceType {
 
 export const experiences: ExperienceType[] = [
   {
+    id: 9,
+    role: 'Senior Salesforce Developer',
+    company: 'Investissement Québec',
+    jobType: 'Permanent Full Time',
+    from: 'Apr. 2026',
+    to: 'Present',
+    companyUrl: 'https://www.investquebec.com/',
+    tasks: [
+      'Developed and implemented JWT Bearer OAuth authentication flows for secure document generation platform and DocuSign integrations, meeting mandatory Salesforce MFA security compliance deadlines.',
+      'Designed and deployed enterprise-scale Flow automation and Apex logic leveraging bulkified patterns to optimize governor limits and high-volume batch processing.',
+      'Integrated third-party platforms with Salesforce file architecture for automated document generation and signature workflows.',
+      'Translated business requirements from key stakeholders into technical specifications through functional analysis; architected scalable Salesforce solutions and documented implementation patterns for team knowledge transfer.',
+    ],
+    skills: [
+      'Salesforce',
+      'Apex',
+      'Flow',
+      'DocuSign',
+      'OAuth',
+      'API Integration',
+    ],
+  },
+  {
     id: 8,
     role: 'Senior Salesforce Developer',
     company: 'Equativ',

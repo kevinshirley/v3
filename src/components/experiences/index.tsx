@@ -16,7 +16,7 @@ const Experiences: React.FC = () => (
             {experience.from} ⎯ {experience.to}
           </div>
           <div>
-            <h2 className='text-slate-200 font-bold flex items-center whitespace-nowrap'>{experience.role} • <a href={experience.companyUrl} className='experience-company flex items-center gap-x-2 ml-1' target='_blank'>{experience.company} <ExternalLinkIcon /></a></h2>
+            <h2 className='text-slate-200 font-bold flex flex-wrap items-center whitespace-nowrap'>{experience.role} • <a href={experience.companyUrl} className='experience-company flex items-center gap-x-2 ml-1' target='_blank'>{experience.company} <ExternalLinkIcon /></a></h2>
             <h3 className='text-slate-500'>{experience.jobType}</h3>
             <ul className='my-2'>
               {experience.tasks.map((task: string, index: number) => (
