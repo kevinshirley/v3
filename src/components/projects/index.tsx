@@ -26,7 +26,7 @@ const Projects: React.FC = () => (
                 </a>
               </div>
               <div>
-                <h2 className='text-slate-200 font-bold flex items-center gap-x-2 mb-2'><a href={project.url} target='_blank'>{project.title} <ExternalLinkIcon /></a>  • <a href={project?.github ? project.github : '#'} target='_blank'>Github <ExternalLinkIcon /></a></h2>
+                <h2 className='text-slate-200 font-bold flex items-center gap-x-2 mb-2'><a href={project.url} target='_blank'>{project.title} <ExternalLinkIcon /></a>{project.github && <> • <a href={project.github} target='_blank'>Github <ExternalLinkIcon /></a></>}</h2>
                 <p className='text-slate-500 mb-2'>{project.description}</p>
                 <ul className='flex flex-wrap'>
                   {project.skills?.map((skill: string, index: number) => (

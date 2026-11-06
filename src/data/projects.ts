@@ -10,6 +10,25 @@ export interface ProjectType {
 
 export const projects: ProjectType[] = [
   {
+    id: 5,
+    title: 'WealthIron',
+    description: 'Personal wealth management platform I built and actively use to run my own finances, available as a web app and an installable mobile app. Features a pay-cycle P&L statement, a 7-bucket allocation system, and an AI financial advisor that reads your actual numbers instead of giving generic advice.',
+    url: 'https://wealthiron.com',
+    image: '/wealthiron.png',
+    skills: [
+      'React',
+      'NextJS',
+      'NodeJS',
+      'Fastify',
+      'Typescript',
+      'Tailwind',
+      'PostgreSQL',
+      'Redis',
+      'PWA',
+      'Groq AI',
+    ],
+  },
+  {
     id: 1,
     title: 'Quote Form Builder',
     description: 'Web app for creating and customizing quote forms in real-time. Users can dynamically input details and instantly view the calculated quote amount as they complete the form.',
