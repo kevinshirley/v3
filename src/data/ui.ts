@@ -14,7 +14,7 @@ const en = {
     heading: 'About',
     paragraphs: [
       'My coding journey began in 2015, sparked by curiosity about SEO and HTML. Since then, I\'ve grown into a Senior Salesforce Developer building enterprise solutions across industries like finance, insurance, and e-commerce.',
-      'Today, I specialize in Salesforce (Apex, LWC, Flow, CPQ) backed by 8+ years of full-stack experience in React, Node.js, and AWS. I thrive on complex integrations and architecture-heavy projects that go beyond declarative solutions.',
+      'Today, I specialize in Salesforce (Apex, LWC, Flow, CPQ) backed by {years}+ years of full-stack experience in React, Node.js, and AWS. I thrive on complex integrations and architecture-heavy projects that go beyond declarative solutions.',
       'Beyond coding, I stay active at the gym, enjoy time with family, and plan my next travel adventure.',
     ],
   },
@@ -49,7 +49,7 @@ const fr: typeof en = {
     heading: 'À propos',
     paragraphs: [
       'Mon parcours en programmation a commencé en 2015, par curiosité pour le SEO et le HTML. Depuis, je suis devenu Développeur Salesforce sénior et je bâtis des solutions d’entreprise dans des secteurs comme la finance, l’assurance et le e-commerce.',
-      'Aujourd’hui, je me spécialise en Salesforce (Apex, LWC, Flow, CPQ), appuyé par plus de 8 ans d’expérience full stack en React, Node.js et AWS. Je m’épanouis dans les intégrations complexes et les projets à forte composante d’architecture qui vont au-delà des solutions déclaratives.',
+      'Aujourd’hui, je me spécialise en Salesforce (Apex, LWC, Flow, CPQ), appuyé par plus de {years} ans d’expérience full stack en React, Node.js et AWS. Je m’épanouis dans les intégrations complexes et les projets à forte composante d’architecture qui vont au-delà des solutions déclaratives.',
       'En dehors du code, je reste actif au gym, je profite du temps en famille et je planifie ma prochaine aventure de voyage.',
     ],
   },

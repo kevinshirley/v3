@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ui } from '@/data/ui';
+import { withYearsOfExperience } from '@/data/years-of-experience';
 import { Locale } from '@/i18n/config';
 
 const About: React.FC<{ locale: Locale }> = ({ locale }) => (
@@ -10,7 +11,7 @@ const About: React.FC<{ locale: Locale }> = ({ locale }) => (
     </div>
     <div>
       {ui[locale].about.paragraphs.map((paragraph: string) => (
-        <p key={paragraph} className="mb-4 text-slate-400">{paragraph}</p>
+        <p key={paragraph} className="mb-4 text-slate-400">{withYearsOfExperience(paragraph)}</p>
       ))}
     </div>
   </section>

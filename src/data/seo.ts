@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { withYearsOfExperience } from '@/data/years-of-experience';
 import { Locale } from '@/i18n/config';
 
 const siteUrl = 'https://kevinshirley.com';
@@ -30,7 +31,7 @@ const content: Record<Locale, {
 }> = {
   en: {
     title: 'Kevin Shirley | Senior Salesforce Developer',
-    description: 'Senior Salesforce Developer with 8+ years of full-stack experience. Specializing in Apex, LWC, Flow, CPQ, React, Node.js, and AWS. Based in Montreal.',
+    description: 'Senior Salesforce Developer with {years}+ years of full-stack experience. Specializing in Apex, LWC, Flow, CPQ, React, Node.js, and AWS. Based in Montreal.',
     keywords: [
       'Salesforce Developer',
       'Senior Salesforce Developer',
@@ -45,15 +46,15 @@ const content: Record<Locale, {
       'Montreal',
       'Kevin Shirley',
     ],
-    ogDescription: 'Senior Salesforce Developer with 8+ years of full-stack experience in Apex, LWC, React, and Node.js. Building scalable enterprise solutions.',
+    ogDescription: 'Senior Salesforce Developer with {years}+ years of full-stack experience in Apex, LWC, React, and Node.js. Building scalable enterprise solutions.',
     ogLocale: 'en_CA',
-    shortDescription: 'Senior Salesforce Developer with 8+ years of full-stack experience in Apex, LWC, React, and Node.js.',
+    shortDescription: 'Senior Salesforce Developer with {years}+ years of full-stack experience in Apex, LWC, React, and Node.js.',
     jobTitle: 'Senior Salesforce Developer',
     city: 'Montreal',
   },
   fr: {
     title: 'Kevin Shirley | Développeur Salesforce sénior',
-    description: 'Développeur Salesforce sénior avec plus de 8 ans d’expérience full stack. Spécialisé en Apex, LWC, Flow, CPQ, React, Node.js et AWS. Basé à Montréal.',
+    description: 'Développeur Salesforce sénior avec plus de {years} ans d’expérience full stack. Spécialisé en Apex, LWC, Flow, CPQ, React, Node.js et AWS. Basé à Montréal.',
     keywords: [
       'Développeur Salesforce',
       'Développeur Salesforce sénior',
@@ -68,9 +69,9 @@ const content: Record<Locale, {
       'Montréal',
       'Kevin Shirley',
     ],
-    ogDescription: 'Développeur Salesforce sénior avec plus de 8 ans d’expérience full stack en Apex, LWC, React et Node.js. Je bâtis des solutions d’entreprise scalables.',
+    ogDescription: 'Développeur Salesforce sénior avec plus de {years} ans d’expérience full stack en Apex, LWC, React et Node.js. Je bâtis des solutions d’entreprise scalables.',
     ogLocale: 'fr_CA',
-    shortDescription: 'Développeur Salesforce sénior avec plus de 8 ans d’expérience full stack en Apex, LWC, React et Node.js.',
+    shortDescription: 'Développeur Salesforce sénior avec plus de {years} ans d’expérience full stack en Apex, LWC, React et Node.js.',
     jobTitle: 'Développeur Salesforce sénior',
     city: 'Montréal',
   },
@@ -82,20 +83,20 @@ export const buildMetadata = (locale: Locale): Metadata => {
   return {
     ...shared,
     title: page.title,
-    description: page.description,
+    description: withYearsOfExperience(page.description),
     keywords: page.keywords,
     openGraph: {
       type: 'website',
       url: pageUrls[locale],
       title: page.title,
-      description: page.ogDescription,
+      description: withYearsOfExperience(page.ogDescription),
       siteName: 'Kevin Shirley',
       locale: page.ogLocale,
     },
     twitter: {
       card: 'summary',
       title: page.title,
-      description: page.shortDescription,
+      description: withYearsOfExperience(page.shortDescription),
       creator: '@kevinshirley',
     },
     alternates: {
@@ -118,7 +119,7 @@ export const buildJsonLd = (locale: Locale) => {
     name: 'Kevin Shirley',
     url: pageUrls[locale],
     jobTitle: page.jobTitle,
-    description: page.shortDescription,
+    description: withYearsOfExperience(page.shortDescription),
     knowsAbout: ['Salesforce', 'Apex', 'Lightning Web Components', 'Salesforce CPQ', 'React', 'Node.js', 'AWS', 'TypeScript'],
     address: { '@type': 'PostalAddress', addressLocality: page.city, addressCountry: 'CA' },
     sameAs: [

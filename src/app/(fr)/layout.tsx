@@ -1,7 +1,9 @@
 import RootDocument from '@/components/root-document';
 import { buildMetadata } from '@/data/seo';
 
-export const metadata = buildMetadata('fr');
+export function generateMetadata() {
+  return buildMetadata('fr');
+}
 
 export default function RootLayout({
   children,
