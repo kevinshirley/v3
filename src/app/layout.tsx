@@ -79,7 +79,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-slate-900`}>
-        <Theme>
+        <Theme hasBackground={false}>
           {children}
         </Theme>
       </body>
