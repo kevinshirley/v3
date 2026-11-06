@@ -10,8 +10,8 @@ const About: React.FC<{ locale: Locale }> = ({ locale }) => (
       <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">{ui[locale].about.heading}</h2>
     </div>
     <div>
-      {ui[locale].about.paragraphs.map((paragraph: string) => (
-        <p key={paragraph} className="mb-4 text-slate-400">{withYearsOfExperience(paragraph)}</p>
+      {ui[locale].about.paragraphs.map((paragraph: string, index: number) => (
+        <p key={index} className="mb-4 text-slate-400">{withYearsOfExperience(paragraph)}</p>
       ))}
     </div>
   </section>
