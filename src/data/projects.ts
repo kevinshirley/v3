@@ -6,12 +6,14 @@ export interface ProjectType {
   url: string;
   skills?: string[];
   github?: string;
+  builtWithAI?: boolean;
 }
 
 export const projects: ProjectType[] = [
   {
     id: 5,
     title: 'WealthIron',
+    builtWithAI: true,
     description: 'Personal wealth management platform I built and actively use to run my own finances, available as a web app and an installable mobile app. Features a pay-cycle P&L statement, a 7-bucket allocation system, and an AI financial advisor that reads your actual numbers instead of giving generic advice.',
     url: 'https://wealthiron.com',
     image: '/wealthiron.png',
