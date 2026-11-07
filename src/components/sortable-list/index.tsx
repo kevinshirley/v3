@@ -34,7 +34,10 @@ const CollapsibleItems: React.FC<{ items: React.ReactNode[]; collapse: CollapseO
   const showAllRef = useRef<HTMLButtonElement>(null);
 
   // React only renders a plain `hidden`, which find-in-page can't search.
+  // Browsers without until-found (Safari) would show the items, so they keep plain `hidden`.
   useEffect(() => {
+    if (!('onbeforematch' in document.body)) return;
+
     listRef.current?.querySelectorAll('[hidden]').forEach((item) => item.setAttribute('hidden', 'until-found'));
   });
 
