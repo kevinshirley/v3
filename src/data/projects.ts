@@ -35,6 +35,7 @@ export const projects: ProjectType[] = [
       'Redis',
       'PWA',
       'Groq AI',
+      'Wealthsimple API',
     ],
   },
   {
