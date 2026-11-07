@@ -21,6 +21,8 @@ const en = {
   experiences: {
     heading: 'Experience',
     resume: 'View Full Resume',
+    sortOldestFirst: 'Sort oldest first',
+    sortNewestFirst: 'Sort newest first',
   },
   projects: {
     heading: 'Projects',
@@ -56,6 +58,8 @@ const fr: typeof en = {
   experiences: {
     heading: 'Expérience',
     resume: 'Voir le CV complet (en anglais)',
+    sortOldestFirst: 'Trier du plus ancien au plus récent',
+    sortNewestFirst: 'Trier du plus récent au plus ancien',
   },
   projects: {
     heading: 'Projets',

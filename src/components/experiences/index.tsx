@@ -5,14 +5,15 @@ import { ExternalLinkIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 import { experiences, ExperienceType } from '@/data/experiences';
 import { ui } from '@/data/ui';
 import { Locale } from '@/i18n/config';
+import SortableList from './sortable-list';
 
 const Experiences: React.FC<{ locale: Locale }> = ({ locale }) => (
   <section className='mb-36' id='experiences'>
-    <div className='block lg:hidden mb-8'>
-      <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only'>{ui[locale].experiences.heading}</h2>
-    </div>
-    <div>
-      {experiences.map((experience: ExperienceType) => (
+    <SortableList
+      heading={ui[locale].experiences.heading}
+      sortOldestFirst={ui[locale].experiences.sortOldestFirst}
+      sortNewestFirst={ui[locale].experiences.sortNewestFirst}
+      items={experiences.map((experience: ExperienceType) => (
         <div key={experience.id} className='mb-24 last:mb-0 md:mb-12 flex flex-col sm:flex-row gap-x-3'>
           <div className='z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 whitespace-nowrap'>
             {experience.from[locale]} ⎯ {experience.to[locale]}
@@ -40,7 +41,7 @@ const Experiences: React.FC<{ locale: Locale }> = ({ locale }) => (
           </div>
         </div>
       ))}
-    </div>
+    />
     <div className='mt-12'>
       <a className='text-slate-200 font-bold flex items-center gap-x-2 hover:gap-x-3 hover:underline transition-all' href='/resume.pdf' target='__blank'>{ui[locale].experiences.resume} <ArrowRightIcon /></a>
     </div>
