@@ -9,7 +9,8 @@
     "dev": "next dev -p 3022",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "resume": "node resume/build.mjs"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",
