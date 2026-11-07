@@ -79,3 +79,8 @@ body {
     scroll-margin-top: 1.5rem;
   }
 }
+
+/* Tailwind's base styles force [hidden] to display: none, which find-in-page can't search. */
+[hidden='until-found'] {
+  display: block;
+}

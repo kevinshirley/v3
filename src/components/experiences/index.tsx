@@ -13,8 +13,13 @@ const Experiences: React.FC<{ locale: Locale }> = ({ locale }) => (
       heading={ui[locale].experiences.heading}
       sortOldestFirst={ui[locale].experiences.sortOldestFirst}
       sortNewestFirst={ui[locale].experiences.sortNewestFirst}
+      collapse={{
+        visibleCount: 2,
+        showAll: ui[locale].experiences.showAll.replace('{count}', String(experiences.length)),
+        showLess: ui[locale].experiences.showLess,
+      }}
       items={experiences.map((experience: ExperienceType) => (
-        <div key={experience.id} className='mb-24 last:mb-0 md:mb-12 flex flex-col sm:flex-row gap-x-3'>
+        <div key={experience.id} className='flex flex-col sm:flex-row gap-x-3'>
           <div className='z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 whitespace-nowrap'>
             {experience.from[locale]} ⎯ {experience.to[locale]}
           </div>

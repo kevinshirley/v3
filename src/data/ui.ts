@@ -23,6 +23,8 @@ const en = {
     resume: 'View Full Resume',
     sortOldestFirst: 'Sort oldest first',
     sortNewestFirst: 'Sort newest first',
+    showAll: 'Show all {count} experiences',
+    showLess: 'Show less',
   },
   projects: {
     heading: 'Projects',
@@ -62,6 +64,8 @@ const fr: typeof en = {
     resume: 'Voir le CV complet (en anglais)',
     sortOldestFirst: 'Trier du plus ancien au plus récent',
     sortNewestFirst: 'Trier du plus récent au plus ancien',
+    showAll: 'Voir les {count} expériences',
+    showLess: 'Réduire',
   },
   projects: {
     heading: 'Projets',
