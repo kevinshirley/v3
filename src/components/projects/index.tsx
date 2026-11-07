@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Badge } from '@radix-ui/themes';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 
+import SortableList, { SortedItems } from '@/components/sortable-list';
 import { projects, ProjectType } from '@/data/projects';
 import { ui } from '@/data/ui';
 import { Locale } from '@/i18n/config';
@@ -33,6 +34,7 @@ const ProjectCard: React.FC<{ project: ProjectType; locale: Locale }> = ({ proje
         </a>
       </div>
       <div>
+        <p className='text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1'>{project.year}</p>
         <h2 className='text-slate-200 font-bold flex flex-wrap items-center gap-x-2 mb-2'><a href={project.url} target='_blank'>{project.title} <ExternalLinkIcon /></a>{project.github && <> • <a href={project.github} target='_blank'>Github <ExternalLinkIcon /></a></>}</h2>
         <p className='text-slate-500 mb-2'>{project.description[locale]}</p>
         <ul className='flex flex-wrap'>
@@ -51,20 +53,24 @@ const ProjectCard: React.FC<{ project: ProjectType; locale: Locale }> = ({ proje
 
 const Projects: React.FC<{ locale: Locale }> = ({ locale }) => (
   <section className='mb-36' id='projects'>
-    <div className='block lg:hidden mb-8'>
-      <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only'>{ui[locale].projects.heading}</h2>
-    </div>
-    {projectGroups.map((group) => (
-      <div key={group.key} className='mb-24 last:mb-0'>
-        <div className='mb-8 border-b border-slate-700 pb-3'>
-          <h3 className='text-sm font-bold uppercase tracking-widest text-slate-200'>{ui[locale].projects[group.key].title}</h3>
-          <p className='text-sm text-slate-500 mt-1'>{ui[locale].projects[group.key].description}</p>
+    <SortableList
+      heading={ui[locale].projects.heading}
+      sortOldestFirst={ui[locale].projects.sortOldestFirst}
+      sortNewestFirst={ui[locale].projects.sortNewestFirst}
+      items={projectGroups.map((group) => (
+        <div key={group.key} className='mb-24 last:mb-0'>
+          <div className='mb-8 border-b border-slate-700 pb-3'>
+            <h3 className='text-sm font-bold uppercase tracking-widest text-slate-200'>{ui[locale].projects[group.key].title}</h3>
+            <p className='text-sm text-slate-500 mt-1'>{ui[locale].projects[group.key].description}</p>
+          </div>
+          <SortedItems
+            items={group.projects.map((project: ProjectType) => (
+              <ProjectCard key={project.id} project={project} locale={locale} />
+            ))}
+          />
         </div>
-        {group.projects.map((project: ProjectType) => (
-          <ProjectCard key={project.id} project={project} locale={locale} />
-        ))}
-      </div>
-    ))}
+      ))}
+    />
   </section>
 );
 

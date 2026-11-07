@@ -26,6 +26,8 @@ const en = {
   },
   projects: {
     heading: 'Projects',
+    sortOldestFirst: 'Sort oldest first',
+    sortNewestFirst: 'Sort newest first',
     builtWithAI: {
       title: 'Built with AI',
       description: 'Built by me using AI coding tools.',
@@ -63,6 +65,8 @@ const fr: typeof en = {
   },
   projects: {
     heading: 'Projets',
+    sortOldestFirst: 'Trier du plus ancien au plus récent',
+    sortNewestFirst: 'Trier du plus récent au plus ancien',
     builtWithAI: {
       title: 'Conçu avec l’IA',
       description: 'Développé par moi à l’aide d’outils de code IA.',

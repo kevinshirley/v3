@@ -1,7 +1,16 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { ArrowDownIcon } from '@radix-ui/react-icons';
+
+const NewestFirstContext = createContext(true);
+
+// Follows the order of the surrounding SortableList, so nested lists flip too.
+export const SortedItems: React.FC<{ items: React.ReactNode[] }> = ({ items }) => {
+  const newestFirst = useContext(NewestFirstContext);
+
+  return <>{newestFirst ? items : [...items].reverse()}</>;
+};
 
 interface SortableListProps {
   heading: string;
@@ -16,7 +25,7 @@ const SortableList: React.FC<SortableListProps> = ({ heading, sortOldestFirst, s
   const label = newestFirst ? sortOldestFirst : sortNewestFirst;
 
   return (
-    <>
+    <NewestFirstContext.Provider value={newestFirst}>
       <div className='flex items-center gap-x-1 mb-8'>
         <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200'>{heading}</h2>
         <button
@@ -29,8 +38,10 @@ const SortableList: React.FC<SortableListProps> = ({ heading, sortOldestFirst, s
           <ArrowDownIcon className={`transition-transform ${newestFirst ? '' : 'rotate-180'}`} />
         </button>
       </div>
-      <div>{newestFirst ? items : [...items].reverse()}</div>
-    </>
+      <div>
+        <SortedItems items={items} />
+      </div>
+    </NewestFirstContext.Provider>
   );
 };
 

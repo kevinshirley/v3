@@ -2,10 +2,10 @@ import React from 'react';
 import { Badge } from '@radix-ui/themes';
 import { ExternalLinkIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 
+import SortableList from '@/components/sortable-list';
 import { experiences, ExperienceType } from '@/data/experiences';
 import { ui } from '@/data/ui';
 import { Locale } from '@/i18n/config';
-import SortableList from './sortable-list';
 
 const Experiences: React.FC<{ locale: Locale }> = ({ locale }) => (
   <section className='mb-36' id='experiences'>

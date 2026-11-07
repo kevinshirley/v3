@@ -4,6 +4,7 @@ export interface ProjectType {
   id: number;
   image: string;
   title: string;
+  year: number;
   description: Localized;
   url: string;
   skills?: string[];
@@ -15,6 +16,7 @@ export const projects: ProjectType[] = [
   {
     id: 5,
     title: 'WealthIron',
+    year: 2026,
     builtWithAI: true,
     description: {
       en: 'Personal wealth management platform I built and actively use to run my own finances, available as a web app and an installable mobile app. Features a pay-cycle P&L statement, a 7-bucket allocation system, and an AI financial advisor that reads your actual numbers instead of giving generic advice.',
@@ -38,6 +40,7 @@ export const projects: ProjectType[] = [
   {
     id: 1,
     title: 'Quote Form Builder',
+    year: 2024,
     description: {
       en: 'Web app for creating and customizing quote forms in real-time. Users can dynamically input details and instantly view the calculated quote amount as they complete the form.',
       fr: 'Web app pour créer et personnaliser des formulaires de soumission en temps réel. Les utilisateurs peuvent saisir leurs informations de façon dynamique et voir instantanément le montant calculé de la soumission à mesure qu’ils remplissent le formulaire.',
@@ -55,8 +58,31 @@ export const projects: ProjectType[] = [
     github: 'https://github.com/kevinshirley/quote-form'
   },
   {
+    id: 3,
+    title: 'Stock Market Recommender',
+    year: 2022,
+    description: {
+      en: 'Built a Next.js app leveraging the Finnhub API to provide real-time stock ticker prices and the latest market news for seamless financial insights.',
+      fr: 'Développé une app Next.js qui utilise l’API Finnhub pour fournir les prix des stock tickers en temps réel et les dernières nouvelles du marché, pour des informations financières accessibles en un coup d’œil.',
+    },
+    image: '/stockmarketrecommender.png',
+    url: 'https://stockmarketrecommender.vercel.app/',
+    skills: [
+      'React',
+      'NextJS',
+      'NodeJS',
+      'Javascript',
+      'Typescript',
+      'CSS',
+      'Finnhub API',
+      'Twitter API',
+    ],
+    github: 'https://github.com/kevinshirley/stockmarketrecommender'
+  },
+  {
     id: 2,
     title: 'Billmate.io',
+    year: 2021,
     description: {
       en: 'Billmate.io is an all-in-one business management software designed to streamline operations for businesses. It offers features like CRM, invoicing, scheduling, online forms, and more. The platform aims to enhance efficiency, client management, and overall workflow for service-oriented businesses.',
       fr: 'Billmate.io est un logiciel de gestion d’entreprise tout-en-un conçu pour simplifier les opérations des entreprises. Il offre des fonctionnalités comme un CRM, la facturation, la planification, des formulaires en ligne et plus encore. La plateforme vise à améliorer l’efficacité, la gestion des clients et le workflow global des entreprises de services.',
@@ -80,29 +106,9 @@ export const projects: ProjectType[] = [
     github: 'https://github.com/softelo/billmate'
   },
   {
-    id: 3,
-    title: 'Stock Market Recommender',
-    description: {
-      en: 'Built a Next.js app leveraging the Finnhub API to provide real-time stock ticker prices and the latest market news for seamless financial insights.',
-      fr: 'Développé une app Next.js qui utilise l’API Finnhub pour fournir les prix des stock tickers en temps réel et les dernières nouvelles du marché, pour des informations financières accessibles en un coup d’œil.',
-    },
-    image: '/stockmarketrecommender.png',
-    url: 'https://stockmarketrecommender.vercel.app/',
-    skills: [
-      'React',
-      'NextJS',
-      'NodeJS',
-      'Javascript',
-      'Typescript',
-      'CSS',
-      'Finnhub API',
-      'Twitter API',
-    ],
-    github: 'https://github.com/kevinshirley/stockmarketrecommender'
-  },
-  {
     id: 4,
     title: 'Tic Tac Toe Game',
+    year: 2019,
     description: {
       en: 'Responsive Tic Tac Toe game built using React, featuring interactive gameplay, real-time state updates, and a winning logic algorithm for an engaging user experience.',
       fr: 'Jeu de Tic Tac Toe responsive développé avec React, offrant une jouabilité interactive, des mises à jour de state en temps réel et un algorithme de détection de victoire pour une expérience utilisateur engageante.',
@@ -120,6 +126,7 @@ export const projects: ProjectType[] = [
   {
     id: 6,
     title: 'Taquin Puzzle',
+    year: 2017,
     description: {
       en: 'Classic 15-tile sliding puzzle built with vanilla JavaScript and no framework, featuring a randomly shuffled board on every load and click-to-slide moves.',
       fr: 'Jeu de taquin classique à 15 tuiles développé en JavaScript pur, sans framework, avec un plateau mélangé au hasard à chaque chargement et des tuiles qu’on déplace d’un clic.',
