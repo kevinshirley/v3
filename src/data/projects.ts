@@ -117,4 +117,20 @@ export const projects: ProjectType[] = [
     ],
     github: 'https://github.com/kevinshirley/tictactoe'
   },
+  {
+    id: 6,
+    title: 'Taquin Puzzle',
+    description: {
+      en: 'Classic 15-tile sliding puzzle built with vanilla JavaScript and no framework, featuring a randomly shuffled board on every load and click-to-slide moves.',
+      fr: 'Jeu de taquin classique à 15 tuiles développé en JavaScript pur, sans framework, avec un plateau mélangé au hasard à chaque chargement et des tuiles qu’on déplace d’un clic.',
+    },
+    image: '/taquin-puzzle.png',
+    url: 'https://web-production-a87a4.up.railway.app',
+    skills: [
+      'Javascript',
+      'HTML',
+      'CSS',
+    ],
+    github: 'https://github.com/kevinshirley/taquinPuzzle'
+  },
 ];
